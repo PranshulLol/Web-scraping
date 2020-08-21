@@ -1,6 +1,7 @@
 import json
+from nltk.tokenize import word_tokenize 
 
-with open('python.json')as f:
+with open('python.json', 'r') as f:
     line = f.readline()
-    tweet = json.load(line)
-    print(json.dumps(tweet, indent = 4))
+    tweet = json.loads(line)
+    print(json.dumps(tweet, indent=4))
